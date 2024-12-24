@@ -114,6 +114,7 @@ func (c *NSDCollector) updateMetric(s string) error {
 	// Assume line is in "metric=#" format
 	line := strings.Split(s, "=")
 	metricName := strings.TrimSpace(line[0])
+	metricName = strings.ReplaceAll(metricName, "-", "_")
 
 	_, exists := c.metrics[metricName]
 	if !exists {
