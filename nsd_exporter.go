@@ -74,7 +74,6 @@ func (c *NSDCollector) Collect(ch chan<- prometheus.Metric) {
 	for s.Scan() {
 		line := strings.Split(s.Text(), "=")
 		metricName := strings.TrimSpace(line[0])
-		metricName = strings.ReplaceAll(metricName, "-", "_")
 		m, ok := c.metrics[metricName]
 		if !ok {
 			log.Println("New metric " + metricName + " found. Refreshing.")
@@ -114,7 +113,6 @@ func (c *NSDCollector) updateMetric(s string) error {
 	// Assume line is in "metric=#" format
 	line := strings.Split(s, "=")
 	metricName := strings.TrimSpace(line[0])
-	metricName = strings.ReplaceAll(metricName, "-", "_")
 
 	_, exists := c.metrics[metricName]
 	if !exists {
