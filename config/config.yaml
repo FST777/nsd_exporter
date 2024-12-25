@@ -133,7 +133,7 @@ label_metrics:
       - domain
     help: 'number of queries that were dropped because they failed sanity check.'
     type: counter
-  ([\w\-\.]*)\.?num\.type\.(\w\-+):
+  ([\w\-\.]*)\.?num\.type\.([\w\-]+):
     name: num_type
     labels:
       - domain
