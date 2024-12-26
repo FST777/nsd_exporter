@@ -40,124 +40,124 @@ label_metrics:
   ([\w\-\.]*)\.?num\.queries:
     name: num_queries
     labels:
-      - domain
+      - zone
     help: 'number of queries received (the tcp and udp queries added up).'
     type: counter
   ([\w\-\.]*)\.?num.edns$:
     name: num_edns
     labels:
-      - domain
+      - zone
     help: 'number of queries with EDNS OPT.'
     type: counter
   ([\w\-\.]*)\.?num.ednserr:
     name: num_ednserr
     labels:
-      - domain
+      - zone
     help: 'number of queries which failed EDNS parse.'
     type: counter
   ([\w\-\.]*)\.?num\.udp$:
     name: num_udp
     labels:
-      - domain
+      - zone
     help: 'number of queries over UDP ip4.'
     type: counter
   ([\w\-\.]*)\.?num\.udp6:
     name: num_upd6
     labels:
-      - domain
+      - zone
     help: 'number of queries over UDP ip6.'
     type: counter
   ([\w\-\.]*)\.?num\.tcp$:
     name: num_tcp
     labels:
-      - domain
+      - zone
     help: 'number of connections over TCP ip4.'
     type: counter
   ([\w\-\.]*)\.?num\.tcp6:
     name: num_tcp6
     labels:
-      - domain
+      - zone
     help: 'number of connections over TCP ip6.'
     type: counter
   ([\w\-\.]*)\.?num\.tls$:
     name: num_tls
     labels:
-      - domain
+      - zone
     help: 'number of connections over TLS ip4. TLS queries are not part of num.tcp.'
     type: counter
   ([\w\-\.]*)\.?num\.tls6:
     name: num_tls6
     labels:
-      - domain
+      - zone
     help: 'number of connections over TLS ip6. TLS queries are not part of num.tcp6.'
     type: counter
   ([\w\-\.]*)\.?num\.answer_wo_aa:
     name: num_answer_wo_aa
     labels:
-      - domain
+      - zone
     help: 'number of answers with NOERROR rcode and without AA flag, this includes the referrals.'
     type: counter
   ([\w\-\.]*)\.?num\.rxerr:
     name: num_rxerr
     labels:
-      - domain
+      - zone
     help: 'number of queries for which the receive failed.'
     type: counter
   ([\w\-\.]*)\.?num\.txerr:
     name: num_txerr
     labels:
-      - domain
+      - zone
     help: 'number of answers for which the transmit failed.'
     type: counter
   ([\w\-\.]*)\.?num\.raxfr:
     name: num_raxfr
     labels:
-      - domain
+      - zone
     help: 'number of AXFR requests from clients (that got served with reply).'
     type: counter
   ([\w\-\.]*)\.?num\.rixfr:
     name: num_rixfr
     labels:
-      - domain
+      - zone
     help: 'number of IXFR requests from clients (that got served with reply).'
     type: counter
   ([\w\-\.]*)\.?num\.truncated:
     name: num_truncated
     labels:
-      - domain
+      - zone
     help: 'number of answers with TC flag set.'
     type: counter
   ([\w\-\.]*)\.?num\.dropped:
     name: num_dropped
     labels:
-      - domain
+      - zone
     help: 'number of queries that were dropped because they failed sanity check.'
     type: counter
   ([\w\-\.]*)\.?num\.type\.([\w\-]+):
     name: num_type
     labels:
-      - domain
+      - zone
       - type
     help: 'number of queries with this query type.'
     type: counter
   ([\w\-\.]*)\.?num\.opcode\.(\w+):
     name: num_opcode
     labels:
-      - domain
+      - zone
       - type
     help: 'number of queries with this opcode.'
     type: counter
   ([\w\-\.]*)\.?num\.class\.(\w+):
     name: num_class
     labels:
-      - domain
+      - zone
       - class
     help: 'number of queries with this query class.'
     type: counter
   ([\w\-\.]*)\.?num\.rcode\.(\w+):
     name: num_rcode
     labels:
-      - domain
+      - zone
       - rcode
     help: 'number of answers that carried this return code.'
     type: counter
